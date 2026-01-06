@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>மௌனம் பேசியதே - அ. ஆதித்யா ஆதர்ஷ்</title>
+    <meta name="description" content="மௌனம் பேசியதே - கவிதை நூல். ஆசிரியர்: அ. ஆதித்யா ஆதர்ஷ்.">
+    
+    <!-- Google Fonts for optimized Tamil rendering -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;700&family=Noto+Sans+Tamil:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Noto Serif Tamil"', 'serif'],
+                        sans: ['"Noto Sans Tamil"', 'sans-serif'],
+                    },
+                    colors: {
+                        'paper': '#fdfbf7',
+                        'ink': '#1a1a1a',
+                        'accent': '#8b5cf6', // Soft purple
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased leading-relaxed selection:bg-accent selection:text-white">
+
+    <!-- Main Container -->
+    <main class="max-w-3xl mx-auto px-6 py-12 md:py-20 flex flex-col items-center">
+
+        <!-- Header / Title -->
+        <header class="text-center mb-12 animate-fade-in-up">
+            <h1 class="text-4xl md:text-6xl font-bold font-serif mb-4 tracking-tight text-gray-900">
+                மௌனம் பேசியதே
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 font-light">
+                ஓர் கவிதை நூல்
+            </p>
+            <div class="h-1 w-24 bg-accent mx-auto mt-6 rounded-full opacity-50"></div>
+        </header>
+
+        <!-- Book Cover & Info Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full mb-16">
+            <!-- Image Section -->
+            <div class="relative group mx-auto w-full max-w-sm">
+                <div class="absolute -inset-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <!-- 
+                     NOTE: Ensure your image file is named 'Untitled.jpg' or 'book-cover.jpg' 
+                     and sits in the same folder as this HTML file.
+                -->
+                <img 
+                    src="./Untitled.jpg" 
+                    alt="Mounam Pesiyathe Book Cover" 
+                    class="relative w-full rounded-lg shadow-2xl transform transition duration-500 hover:scale-[1.01]"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x600/e2e8f0/475569?text=Mounam+Pesiyathe\\n(Book+Cover)';"
+                >
+            </div>
+
+            <!-- Details Section -->
+            <div class="space-y-6 text-left">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <h2 class="text-lg font-semibold text-gray-400 uppercase tracking-wider mb-4 text-xs">நூல் விவரங்கள்</h2>
+                    
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-gray-100 pb-2">
+                            <span class="text-gray-500">ஆசிரியர்</span>
+                            <span class="font-medium font-serif">அ. ஆதித்யா ஆதர்ஷ்</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 pb-2">
+                            <span class="text-gray-500">வெளியீடு</span>
+                            <span class="font-medium">மைத் கிரியேட்டர்ஸ்</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 pb-2">
+                            <span class="text-gray-500">பதிப்பு</span>
+                            <span class="font-medium">ஜனவரி 2026</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-100 pb-2">
+                            <span class="text-gray-500">விலை</span>
+                            <span class="font-medium text-accent">₹120/-</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="mailto:aadharshaadhithya@gmail.com" class="block w-full text-center bg-gray-900 hover:bg-black text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                            புத்தகம் வாங்க தொடர்பு கொள்ளவும்
+                        </a>
+                        <p class="text-xs text-center text-gray-400 mt-2">அல்லது அழைக்கவும்: 99422 11280</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foreword Snippet Section -->
+        <section class="max-w-2xl w-full mx-auto mb-16">
+            <div class="relative bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100">
+                <svg class="absolute top-6 left-6 w-8 h-8 text-gray-200 transform -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                    <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                </svg>
+                
+                <h3 class="text-center font-serif text-xl text-gray-900 mb-6 font-semibold">என்னுரையில் இருந்து...</h3>
+                
+                <div class="prose prose-lg text-gray-600 font-light leading-relaxed text-justify">
+                    <p class="mb-4">
+                        "தூரத்தாலும் காலத்தாலும் வெவ்வேறு புள்ளிகளில் இருக்கும் நாம், இன்று இப்புத்தகத்தின் வாயிலாக ஒரே புள்ளியில் இணைந்துள்ளோம்."
+                    </p>
+                    <p class="mb-4">
+                        "வாழ்க்கையில் பல தருணங்களில் உங்கள் புலன்களால் உங்களுக்குத் தோன்றும் உணர்ச்சிகளை உங்கள் மனதோடு இணைப்பது மௌன வெளி. பின்பு சொற்கள் வந்து மௌனவெளியை மாசுபடுத்தி அந்த இணைப்பின் புனிதத்தை குறைத்து விடுகிறது. சொற்கள் ஏதும் தோன்றும் முன்னே, உணர்ச்சிகளுக்கும் மௌனத்துக்கும் அந்த முதற்கணத்தில் இருக்கும் உறவின் பாடல் தொகுப்பே இப்புத்தகம்."
+                    </p>
+                </div>
+                
+                <cite class="block mt-8 text-right text-sm font-medium text-gray-900 not-italic">
+                    — அ. ஆதித்யா ஆதர்ஷ்
+                </cite>
+            </div>
+        </section>
+
+        <!-- Sample Poem Section -->
+        <section class="max-w-xl w-full text-center mb-16">
+            <span class="inline-block py-1 px-3 rounded-full bg-gray-100 text-gray-500 text-xs font-semibold tracking-wide mb-6">
+                கவிதைத் துளி
+            </span>
+            <blockquote class="font-serif text-xl md:text-2xl leading-loose text-gray-700 italic">
+                "அவளது அன்பின் வழி வரும்<br>
+                மெளனம் மட்டும் தான்<br>
+                என்னுடன் இருக்கும் என்றால்,<br>
+                அதுவும் எனக்கு மகிழ்ச்சிதான்."
+            </blockquote>
+            <cite class="block mt-6 text-sm text-gray-500 not-italic">— அ. ஆதித்யா ஆதர்ஷ்</cite>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full text-center border-t border-gray-200 pt-8 mt-auto">
+            <p class="text-sm text-gray-400">
+                © 2026 அ. ஆதித்யா ஆதர்ஷ். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
+            </p>
+            <div class="flex justify-center space-x-4 mt-4">
+                 <a href="mailto:aadharshaadhithya@gmail.com" class="text-gray-400 hover:text-accent transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                 </a>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
