@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Grammar of Silence — A Literary Essay</title>
+<meta name="description" content="On the solitary dreamer in Dostoevsky's White Nights and Adharsh Adithya's Mounam Pesiyathe.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400;1,8..60,500&family=Jost:wght@400;500;600&family=Noto+Serif+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper: #f2ece0;
+    --paper-deep: #e9e0cf;
+    --ink: #241f19;
+    --ink-soft: #55493d;
+    --rule: #cbbfa4;
+    --maroon: #7c2323;
+    --maroon-deep: #591515;
+    --gold: #a9813f;
+    --measure: 680px;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--paper);
+    background-image:
+      radial-gradient(ellipse at top left, rgba(124,35,35,0.04), transparent 45%),
+      radial-gradient(ellipse at bottom right, rgba(169,129,63,0.05), transparent 50%);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection{ background: var(--maroon); color: var(--paper); }
+
+  a{ color: var(--maroon); }
+
+  /* ---------- Masthead ---------- */
+
+  .masthead{
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 5.5rem 1.5rem 3rem;
+    text-align: center;
+  }
+
+  .kicker{
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--maroon);
+    margin: 0 0 1.6rem;
+  }
+
+  .kicker::before, .kicker::after{
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin: 0 0.75em;
+  }
+
+  h1.title{
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    line-height: 1.05;
+    margin: 0 0 1.1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle{
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 560px;
+    margin: 0 auto 2.2rem;
+    line-height: 1.55;
+  }
+
+  .subtitle em{ font-style: normal; font-weight: 600; color: var(--ink); }
+
+  /* twin-title ornament: the signature element */
+  .twin-ornament{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1rem;
+    margin: 0 auto 0.4rem;
+    max-width: 460px;
+  }
+  .twin-ornament .side{
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  .twin-ornament svg{ flex: 0 0 auto; }
+
+  .byline-block{
+    margin-top: 2.2rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.03em;
+  }
+  .byline-block .divider{
+    margin: 0.9rem auto;
+    width: 46px;
+    height: 2px;
+    background: var(--maroon);
+  }
+
+  /* ---------- Article body ---------- */
+
+  article{
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 0 1.5rem 6rem;
+  }
+
+  .lede{
+    font-size: 1.12rem;
+  }
+
+  .lede::first-letter{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 4.6rem;
+    line-height: 0.78;
+    float: left;
+    padding: 0.06em 0.1em 0 0;
+    color: var(--maroon-deep);
+  }
+
+  p{ margin: 0 0 1.35rem; }
+
+  .aside-note{
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    border-left: 2px solid var(--rule);
+    padding-left: 1rem;
+    margin: 1.6rem 0 2rem;
+  }
+
+  h2{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.55rem;
+    margin: 3.6rem 0 1.3rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--rule);
+    color: var(--maroon-deep);
+    letter-spacing: -0.005em;
+  }
+
+  h2 .num{
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  h3.coda-title{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 4rem 0 1.4rem;
+    color: var(--maroon-deep);
+  }
+
+  /* ---------- Quotation blocks ---------- */
+
+  blockquote.quote{
+    margin: 1.8rem 0;
+    padding: 0.3rem 0 0.3rem 1.3rem;
+    border-left: 3px solid var(--maroon);
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1rem;
+  }
+
+  blockquote.quote p{ margin: 0 0 0.5rem; }
+  blockquote.quote p:last-child{ margin: 0; }
+
+  blockquote.quote cite{
+    display: block;
+    margin-top: 0.6rem;
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    opacity: 0.75;
+  }
+
+  .verse{
+    margin: 1.9rem 0;
+    padding: 1.5rem 1.7rem;
+    background: linear-gradient(180deg, var(--paper-deep), rgba(233,224,207,0.4));
+    border-radius: 3px;
+    position: relative;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .verse::before{
+    content: "தமிழ்";
+    position: absolute;
+    top: -0.6em;
+    left: 1.4rem;
+    background: var(--paper);
+    padding: 0 0.6em;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+  }
+
+  .verse .ta{
+    font-family: 'Noto Serif Tamil', 'Source Serif 4', serif;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--ink);
+    margin: 0 0 1rem;
+  }
+
+  .verse .en{
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin: 0;
+    padding-top: 0.9rem;
+    border-top: 1px dashed var(--rule);
+  }
+
+  /* section divider ornament */
+  .flourish{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0;
+    color: var(--gold);
+  }
+  .flourish::before, .flourish::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+  .flourish span{
+    margin: 0 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* divergence list styling for section VI */
+  .divergence{
+    margin: 1.6rem 0;
+  }
+  .divergence dt{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--maroon-deep);
+    margin-top: 1.6rem;
+  }
+  .divergence dd{
+    margin: 0.4rem 0 0;
+  }
+
+  strong{ color: var(--maroon-deep); font-weight: 600; }
+
+  /* ---------- Colophon / works cited ---------- */
+
+  .colophon{
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+    text-align: center;
+  }
+  .colophon .divider{
+    width: 46px;
+    height: 2px;
+    background: var(--maroon);
+    margin: 0 auto 1.6rem;
+  }
+  .colophon p{
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  footer.site-footer{
+    text-align: center;
+    padding: 2.5rem 1.5rem 3.5rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    opacity: 0.7;
+  }
+
+  @media (max-width: 560px){
+    body{ font-size: 16.5px; }
+    h1.title{ font-size: clamp(2rem, 9vw, 2.6rem); }
+    .verse{ padding: 1.2rem 1.1rem; }
+    .lede::first-letter{ font-size: 3.6rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <p class="kicker">A Literary Essay</p>
+
+  <div class="twin-ornament" aria-hidden="true">
+    <span class="side">WHITE&nbsp;NIGHTS · 1848</span>
+    <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+      <circle cx="17" cy="17" r="10" stroke="#a9813f" stroke-width="1"/>
+      <path d="M17 7 A10 10 0 0 0 17 27 A7 10 0 0 1 17 7Z" fill="#7c2323" opacity="0.85"/>
+    </svg>
+    <span class="side">MOUNAM PESIYATHE · 2026</span>
+  </div>
+
+  <h1 class="title">The Grammar of Silence</h1>
+  <p class="subtitle">On the solitary dreamer in Fyodor Dostoevsky's <em>White Nights</em> and Adharsh Adithya's <em>Mounam Pesiyathe</em></p>
+
+  <div class="byline-block">
+    <div class="divider"></div>
+    For submission to a review of letters
+  </div>
+</header>
+
+<article>
+
+  <p class="lede">Two books open by refusing the reliability of the visible world. Dostoevsky calls <em>White Nights</em> &ldquo;a sentimental story from the diary of a dreamer,&rdquo; and in doing so quietly warns us that everything we are about to read is filtered through a temperament rather than reported from a street. A hundred and seventy-eight years later, in Coimbatore, a young Tamil poet named Adharsh Adithya prints an epigraph on the fifth page of his first collection that could serve as a gloss on Dostoevsky's subtitle:</p>
+
+  <div class="verse">
+    <p class="ta">என் கற்பனை வரையும் கவிதைகள் யாவும்,<br>
+    கண்கள் கூறும் காட்சிகள் அல்ல,<br>
+    மௌனம் பேசும் வார்த்தைகள்.</p>
+    <p class="en">&ldquo;All the poems my imagination draws / are not scenes the eyes narrate, / but the words that silence speaks.&rdquo;</p>
+  </div>
+
+  <p>The very title of the collection — <em>Mounam Pesiyathe</em>, &ldquo;that which silence spoke&rdquo; — makes the same claim as Dostoevsky's frame: the true record of a life is not what the eye witnesses but what the interior voice, muffled and unwitnessed, murmurs to itself. To read these two works side by side — a Russian prose novella of four nights and a dawn, and the central sequence of love-and-solitude lyrics that forms the heart of Adithya's book — is to watch two authors, separated by language, century, and form, arrive at the same discovery: that the most intense human experience is the one that never happened, and that the imagination is at once the dreamer's paradise and his prison.</p>
+
+  <p class="aside-note">The collection closes with a separate cycle of civic and nationalist poems in a wholly different key; that public voice belongs to another essay, and I set it aside here to keep the two solitary dreamers in a single frame.</p>
+
+  <h2><span class="num">I</span>The Dreamer as a Species</h2>
+
+  <p>Dostoevsky's narrator is not merely lonely; he has made a vocation of loneliness. In the novella's central digression he defines himself almost taxonomically, in the third person, as though describing a rare animal to Nastenka:</p>
+
+  <blockquote class="quote">
+    <p>&ldquo;The dreamer — if you want an exact definition — is not a human being, but a creature of an intermediate sort. For the most part he settles in some inaccessible corner, as though hiding from the light of day.&rdquo;</p>
+  </blockquote>
+
+  <p>What is startling is how precisely Adithya's speaker answers to this definition, and how consciously he too regards himself as a &ldquo;creature of an intermediate sort&rdquo; — neither fully in the world nor free of it. His most searching poem is an interrogation of his own ontological status, a litany of <em>நானோ?</em> (&ldquo;is it I?&rdquo;):</p>
+
+  <div class="verse">
+    <p class="ta">திரை காணா ஒரு கதையில்,<br>
+    கலையாடும் பாத்திரம் நானோ?<br>
+    &hellip; நான் தேடும் கனவுக்குள்ளே<br>
+    வாழ்ந்திருக்கும் கனவும் நானோ?</p>
+    <p class="en">&ldquo;In a story no screen has shown, / am I the character at play? &hellip; / Am I, too, the dream that lives / inside the dream I seek?&rdquo;</p>
+  </div>
+
+  <p>The recursion here — a dreamer who suspects he is himself only the dream of the dream he is chasing — is the exact philosophical terminus of Dostoevsky's Dreamer, of whom the narrator asks, with a shudder of self-recognition: &ldquo;would you believe, looking at him, that he <strong>has never known her whom he loves in his ecstatic dreams?</strong>&rdquo; Both men have collapsed the distinction between the lover and the loved, the seeker and the sought. In Dostoevsky this is diagnosed as a pathology of solitude — &ldquo;he is the artist of his own life, and creates it for himself every hour to suit his latest whim.&rdquo; In Adithya it is elevated, almost devotionally, into a metaphysics: the search itself becomes the beloved.</p>
+
+  <p>Crucially, neither poet flinches from the cost. Adithya's speaker, cataloguing what his wandering has yielded, writes with a plainness that could stand as the moral of <em>White Nights</em>:</p>
+
+  <div class="verse">
+    <p class="ta">மனிதர்களைத் தேடிய என் தேடலில், என்னை நானே கண்டறிந்தேன்.<br>
+    விடைகளைத் தேடிய என் தேடலில், வினாக்களை மட்டுமே கண்டறிந்தேன்.<br>
+    காதலைத் தேடிய என் பயணத்தில், தனிமையின் சுகத்தைக் கண்டறிந்தேன்.</p>
+    <p class="en">&ldquo;In my search for people, I found only myself. / In my search for answers, I found only questions. / On my journey in search of love, I found the sweetness of solitude.&rdquo;</p>
+  </div>
+
+  <p>&ldquo;The sweetness of solitude&rdquo; (<em>தனிமையின் சுகம்</em>) is the Tamil name for precisely the condition Dostoevsky's narrator both indulges and mourns — the state of a man &ldquo;satiated, because he is superior to all desire,&rdquo; who nonetheless senses that &ldquo;sometime the mournful hour may strike, when for one day of that pitiful life he would give all his years of phantasy.&rdquo;</p>
+
+  <h2><span class="num">II</span>A Love Addressed to an Absence</h2>
+
+  <p>The engine of both books is a love directed not at a person but at a vacancy shaped like a person. Dostoevsky's Dreamer confesses to Nastenka that he has &ldquo;been in love&rdquo; — &ldquo;with no one, with an ideal, with the one I dream of in my sleep. I make up regular romances in my dreams.&rdquo; His most affecting fantasy is not of consummation but of the smallest imaginable contact:</p>
+
+  <blockquote class="quote">
+    <p>&ldquo;All I ask is, that she should say two or three sisterly words with sympathy, should not repulse me at first sight&hellip; only two words, even though we never meet again afterwards!&rdquo;</p>
+  </blockquote>
+
+  <p>Adithya's beloved is the same phantom, and his petition is scaled to the same heartbreaking modesty. He asks not for a life but for a syllable, a single kiss:</p>
+
+  <div class="verse">
+    <p class="ta">சூடிக் கொள்ள காத்திருக்கும் மங்கை நீ வாராயோ??<br>
+    வாழ வைக்கும் ஓர் முத்தம் நீ எனக்கு தாராயோ??</p>
+    <p class="en">&ldquo;Won't you come, girl who waits to be worn like a garland? / Won't you give me one life-giving kiss?&rdquo;</p>
+  </div>
+
+  <p>Because the beloved will not answer, both men are driven to route their love through intermediaries drawn from the natural world. Dostoevsky's Dreamer, having &ldquo;hardly an acquaintance&rdquo; in eight years of Petersburg, befriends the buildings:</p>
+
+  <blockquote class="quote">
+    <p>&ldquo;I know the houses too. As I walk along they seem to run forward in the streets to look out at me from every window, and almost to say: &lsquo;Good-morning! How do you do?&rsquo;&rdquo;</p>
+  </blockquote>
+
+  <p>Adithya performs an identical displacement, but his confidants are the moon and the sea. Unable to speak to the woman, he tells his tales to the moon and imagines the moon as a surrogate lap; unable to reach her, he writes himself as a wave and posts his verse by lunar courier:</p>
+
+  <div class="verse">
+    <p class="ta">நிலவிடம் நான் கூறும் கதைகளை - உன்<br>
+    காதோரம் நான் சொல்லி இருந்தால்,<br>
+    நிலவின் மடி சேர்ந்து இருப்பேனோ&hellip;?</p>
+    <p class="en">&ldquo;The tales I tell the moon — / had I whispered them instead at your ear, / would I now be resting in the moon's lap?&rdquo;</p>
+  </div>
+
+  <div class="verse">
+    <p class="ta">அலை என நான் எழுதி நிலாவிடம் தூது சொன்னால்,<br>
+    பிழை இன்றி உன் இடத்தில் கவி வந்து சேர்ந்திடுமோ?</p>
+    <p class="en">&ldquo;If I write myself as a wave and send word by the moon, / will the poem reach your side without error?&rdquo;</p>
+  </div>
+
+  <p>The kinship is not merely thematic but structural: in both works, the failure of human address forces speech to overflow into a personified cosmos. Dostoevsky's houses that greet the walker and Adithya's moon that carries his messages are the same gesture — the loneliness so total that the inanimate must be conscripted into conversation.</p>
+
+  <p>To the moon and the sea, however, Adithya adds a third confidante that Dostoevsky could never have supplied — the Tamil language itself, personified as a devoted woman who keeps the vigil the beloved refuses. Where the Petersburg Dreamer can befriend only brick and mortar, the Tamil poet is companioned by <em>தமிழ்</em> as by a living intimate:</p>
+
+  <div class="verse">
+    <p class="ta">என் கண்ணீரின் மேல் தமிழுக்கு எவ்வளவு காதல்?<br>
+    ஒரு துளிக் கூடத் தரையில் படாமல் பார்த்துக் கொண்டு இருக்கிறாள்.<br>
+    &hellip; என் தனிமை மீது அவளுக்கு எவ்வளவு ரசனை?<br>
+    எப்பொழுதும் அதனுள் அழகு சேர்த்துக் கொண்டே இருக்கிறாள்.</p>
+    <p class="en">&ldquo;How much love Tamil bears for my tears — / she keeps watch that not a single drop should fall to the ground&hellip; / What relish she takes in my solitude — / forever she keeps adding beauty to it.&rdquo;</p>
+  </div>
+
+  <p>Here the confidant is not borrowed from the sky but inherited from a civilisation: the mother-tongue is cast as the one companion who guards the poet's grief, embraces his virtue, and — unlike the beloved — never leaves. Elsewhere she is folded directly into the love itself, as the woman who &ldquo;adds still more beauty to my beautiful Tamil verse&rdquo; (<em>அழகிய என் தமிழ்க் கவிக்கு மேலும் அழகு சேர்ப்பவள்</em>), so that language and beloved become facets of a single devotion. It is a solace for which <em>White Nights</em> has no vocabulary, and one of the collection's most native gestures.</p>
+
+  <h2><span class="num">III</span>The Economy of the Ephemeral</h2>
+
+  <p>If there is a single sentence for which <em>White Nights</em> is remembered, it is its last:</p>
+
+  <blockquote class="quote">
+    <p>&ldquo;My God, a whole moment of happiness! Is that too little for the whole of a man's life?&rdquo;</p>
+  </blockquote>
+
+  <p>The entire moral arithmetic of Dostoevsky's novella is compressed here: a single authentic minute, already lived, is set against — and made to outweigh — the years of fantasy and the ruin that follow it. The redemptive unit is minute; the thing it redeems is a whole life.</p>
+
+  <p>It would be too easy, and false, to reach here for the poet's many cries of <em>நொடி ஒன்று போதும்</em> — &ldquo;a single second would be enough.&rdquo; Those lines belong to the agony of <em>anticipation</em>, to the wave that cannot bear one second's wait; they price the future, not the past, and their arithmetic is impatience rather than redemption. Dostoevsky's genius in that last sentence is retrospective — the reckoning of a man totting up what one spent instant was worth. Adithya's true answer to it lies not in the second that is craved but in the remnant that is <em>salvaged</em>: the poems in which a small, discarded residue of love is made to sustain an entire existence. Abandoned, Dostoevsky's Dreamer blesses the woman who left him:</p>
+
+  <blockquote class="quote">
+    <p>&ldquo;May you be blessed for that moment of blissful happiness which you gave to another, lonely and grateful heart!&rdquo;</p>
+  </blockquote>
+
+  <p>Adithya's speaker performs the same redemptive accounting from the far side of the loss — warming himself, for a lifetime, at an ember others would call refuse:</p>
+
+  <div class="verse">
+    <p class="ta">அவள் விட்டுச் சென்ற அன்பின் நிழலில் தானே<br>
+    நான் இன்னும் வெப்பம் காய்ந்து கொண்டு இருக்கிறேன்!<br>
+    &hellip; அந்தக் குப்பையில் ஒரு மனிதன் வாழ்கின்றான் என்று.</p>
+    <p class="en">&ldquo;It is still in the shadow of the love she left behind / that I warm myself&hellip; / Someone tell her: a man is living inside that garbage.&rdquo;</p>
+  </div>
+
+  <p>And elsewhere, with an almost vow-like finality that answers Dostoevsky's closing benediction:</p>
+
+  <div class="verse">
+    <p class="ta">பிரிந்தாலும், இழந்தாலும் என் அன்பு பொய்யல்ல -<br>
+    உன் அன்பும் பொய்யல்ல.</p>
+    <p class="en">&ldquo;Though parted, though lost, my love is no lie — / and neither is yours.&rdquo;</p>
+  </div>
+
+  <p>The difference of temperature is instructive. Dostoevsky's gratitude is valedictory, spoken across fifteen years of accumulated dust; Adithya's is present-tense and defiant, a man refusing to let the last coal go cold. But the underlying economy is identical: in both books, the ephemeral is not the opposite of the eternal but its only honest measure.</p>
+
+  <h2><span class="num">IV</span>Sleepless Nights and the Language of the Eye</h2>
+
+  <p>It is worth pausing on how literally the two works rhyme at the level of image. Dostoevsky's whole novella unfolds across the insomniac &ldquo;white nights&rdquo; of a Petersburg June, when &ldquo;whole sleepless nights pass like a flash in inexhaustible gladness and happiness, and when the dawn gleams rosy at the window.&rdquo; Adithya's governing refrain — <em>மனதின் ஏக்கம்</em>, &ldquo;the longing of the mind&rdquo; — culminates in the same wakeful vigil under the same open sky:</p>
+
+  <div class="verse">
+    <p class="ta">இரவுகள் தூக்கம் இன்றி<br>
+    வானோடு கதைத்து கொள்ள<br>
+    மனதின் ஏக்கம்.</p>
+    <p class="en">&ldquo;To pass the nights without sleep, / conversing with the sky — / the longing of the mind.&rdquo;</p>
+  </div>
+
+  <p>And both writers locate their deepest communication <em>below</em> or <em>beyond</em> language. Dostoevsky's Dreamer and Nastenka reach intimacy not through eloquence but through a shared, wordless recognition; the collection's very title makes silence the true speaker. Adithya states the ambition outright, again inside the <em>ஏக்கம்</em> litany:</p>
+
+  <div class="verse">
+    <p class="ta">மொழிகள் எதும் இன்றி<br>
+    கண்ணோடு பேசி விட<br>
+    மனதின் ஏக்கம்.</p>
+    <p class="en">&ldquo;Without any language at all, / to speak through the eyes — / the longing of the mind.&rdquo;</p>
+  </div>
+
+  <p>Here the two poetics touch most closely. <em>White Nights</em> is a novella obsessed with talk — its four nights are almost entirely dialogue — yet its emotional truth lies in what cannot be said and is finally lost. <em>Mounam Pesiyathe</em> is a book that names silence as its medium, yet fills page after page with speech. Each work, that is, is built on the productive contradiction of a garrulous muteness: language deployed in enormous quantity precisely to circle the thing language cannot hold.</p>
+
+  <h2><span class="num">V</span>The River, the Shore, and the Anniversary of What Never Was</h2>
+
+  <p>The most beautiful convergence is a shared figure for irreversibility. Dostoevsky closes with the image of the anniversary — the narrator, fifteen years on, in the same room with the same servant, keeping &ldquo;the anniversary of that which was once so sweet, <strong>which never existed in reality</strong>.&rdquo; Time has not healed the wound; it has enshrined it. Adithya finds a landscape for the same idea in the recurring conceit of the river that leaves a permanent channel and the shore the waves can never resolve:</p>
+
+  <div class="verse">
+    <p class="ta">நதி சென்ற தடத்தில் வழி என்றும் இருக்கும்,<br>
+    நீ சென்ற மனதில் வலி நிலைத்து கிடக்கும்.</p>
+    <p class="en">&ldquo;Along the track the river ran, a path remains forever; / in the mind you walked through, the ache lies permanently.&rdquo;</p>
+  </div>
+
+  <div class="verse">
+    <p class="ta">கரை தேடிச் சென்றாலும், அலைகளுக்குத் தீர்வில்லை.</p>
+    <p class="en">&ldquo;Though it goes on seeking the shore, the waves find no resolution.&rdquo;</p>
+  </div>
+
+  <p>And, most poignantly, he answers Dostoevsky's &ldquo;which never existed in reality&rdquo; with an image of a love dammed up to irrigate a memory of something that was barely real to begin with:</p>
+
+  <div class="verse">
+    <p class="ta">நீ விட்டுச்சென்ற பாலையிலும், உன் நினைவுகளே மலர்ந்திடும்.<br>
+    &hellip; உன் நினைவுகளின் பாசனத்திற்கு மட்டுமே அது பயன்படுகின்றது.</p>
+    <p class="en">&ldquo;Even in the desert you left behind, your memories alone will bloom&hellip; / it serves only to irrigate your memories, on nights thick with solitude.&rdquo;</p>
+  </div>
+
+  <p>Dostoevsky's Dreamer and Adithya's poet are, in the end, both curators of a private museum whose sole exhibit is an absence. The Russian keeps an anniversary; the Tamil tends a desert garden. The devotional labour is the same.</p>
+
+  <h2><span class="num">VI</span>Idiosyncrasies: Where the Two Part</h2>
+
+  <p>To insist only on parallels would be to flatter both books into a single shape they do not share. Their divergences are as revealing as their echoes.</p>
+
+  <dl class="divergence">
+    <dt>The presence of a listener</dt>
+    <dd>Dostoevsky gives his Dreamer a Nastenka — a real, particular woman who sits on the embankment, answers back, laughs at him, and finally leaves him for another. The novella's ache is earned through an actual encounter; the loss is of someone met. Adithya's beloved, by contrast, never once answers. She is grammatically present — endlessly addressed as <em>பெண்ணே</em> (&ldquo;O girl&rdquo;) — but dramatically absent; the entire collection is the Dreamer's interior monologue <em>without</em> the four nights that would have given it a plot. Where Dostoevsky dramatises longing as event, Adithya distils it to pure lyric pressure. The Tamil book is, in a sense, <em>White Nights</em> with Nastenka subtracted — only the diary, never the embankment.</dd>
+
+    <dt>The satirical eye</dt>
+    <dd>Adithya also permits himself a modern, ironic register wholly foreign to Dostoevsky's earnestness — as in the poem where the thirty-second glamour of a half-clad film dancer is said to eclipse &ldquo;the gaze of the Mona Lisa, the similes of Kamban, the grandeur of the Himalayas.&rdquo; The Dreamer of Petersburg has no such worldly satire in him; his irony is turned only ever inward, on himself.</dd>
+
+    <dt>The stoic key</dt>
+    <dd>Finally, where Dostoevsky's Dreamer is a connoisseur of his own pathos, Adithya's speaker frequently refuses self-pity outright. His most characteristic cadence is not the sigh but the shrug — <em>இல்லை எனினும் பரவாயில்லை</em>, &ldquo;and yet, no matter&rdquo;:</dd>
+  </dl>
+
+  <div class="verse">
+    <p class="ta">ஆனால் ஒரு ஆண் ஆகப் பிறந்து விட்டேன்,<br>
+    என்னைத் தேடி வர யாரும் இல்லை&hellip; இல்லை&hellip;<br>
+    இல்லை எனினும் பரவாயில்லை.</p>
+    <p class="en">&ldquo;But I was born a man; / no one comes seeking me&hellip; no one. / And yet — no matter.&rdquo;</p>
+  </div>
+
+  <p>Set beside Dostoevsky's Dreamer, who savours his loneliness as a kind of tragic distinction, Adithya's poet meets the same fact with a dry, almost bucolic acceptance — the tree, he notes, does not stop giving shade because no birds come.</p>
+
+  <div class="flourish" aria-hidden="true"><span>❦</span></div>
+
+  <h3 class="coda-title">Coda</h3>
+
+  <p>What finally binds <em>White Nights</em> and <em>Mounam Pesiyathe</em> across their gulf of language and time is a shared wager: that a love which never becomes real may nonetheless be the realest thing a person owns. Dostoevsky's narrator gambles his whole biography on &ldquo;a whole moment of happiness&rdquo;; Adithya's poet warms himself for a lifetime at the shadow of a love another would throw away. Both know they are choosing the dream over the day, and both, having counted the cost, choose it again on the last page.</p>
+
+  <p>If the Russian novella teaches us that a single minute of the actual can redeem years of the imagined, the Tamil collection completes the thought from the other side: that when even that minute is denied, the imagination will build, out of a discarded memory and a borrowed moon, a life worth the living. Between them, across a hundred and seventy-eight years, the dreamer and the poet have written two halves of the same confession — one in the white nights of Petersburg, the other in the silence that, at last, learned to speak.</p>
+
+</article>
+
+<div class="colophon">
+  <div class="divider"></div>
+  <p>Works discussed: Fyodor Dostoevsky, <em>White Nights</em> (1848; the passages quoted follow the Constance Garnett translation). Adharsh Adithya, <em>மௌனம் பேசியதே / Mounam Pesiyathe</em> (Coimbatore: Mythe Creators, 2026). Tamil passages are given in the original script with the essayist's own working translations.</p>
+</div>
+
+<footer class="site-footer">A Review of Letters</footer>
+
+</body>
+</html>
